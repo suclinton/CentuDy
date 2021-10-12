@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomeMasterPage.Master.cs" Inherits="CentuDY.Views.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <%-- For Member --%>
+            <asp:Button ID="viewCartBtn" OnClick="ViewCartBtn_Click" runat="server" Text="View Cart" Visible="false"/>
+            <asp:Button ID="viewTransactionHistoryBtn" OnClick="ViewTransactionHistoryBtn_Click" runat="server" Text="View Transaction History" Visible="false" />
+            <%-- For Admin --%>
+            <asp:Button ID="inserMedicineBtn" OnClick="InserMedicineBtn_Click" runat="server" Text="Insert Medicine" Visible="false" />
+            <asp:Button ID="viewUsersBtn" OnClick="ViewUsersBtn_Click" runat="server" Text="View Users" Visible="false" />
+            <asp:Button ID="viewTransactionsReportBtn" OnClick="ViewTransactionsReportBtn_Click" runat="server" Text="View Transactions Report" Visible="false" />
+            <%-- For every user --%>
+            <asp:Button ID="viewMedicineBtn" OnClick="ViewMedicineBtn_Click" runat="server" Text="View Medicines" Visible="false"/>
+            <asp:Button ID="viewProfileBtn" OnClick="ViewProfileBtn_Click" runat="server" Text="View Profile" Visible="false"/>
+            <asp:Button ID="logoutBtn" OnClick="LogoutBtn_Click" runat="server" Text="Logout" Visible="false" />
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
